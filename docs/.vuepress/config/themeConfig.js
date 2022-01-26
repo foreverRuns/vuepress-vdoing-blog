@@ -11,7 +11,7 @@ module.exports = {
   docsDir: 'docs', // 编辑的文件夹
   editLinks: true, // 启用编辑
   editLinkText: '编辑',
-  // repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
+  // repo: 'foreverRuns/vuepress-vdoing-blog', // 导航栏右侧生成Github链接
 
   //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
   // 随机图片API

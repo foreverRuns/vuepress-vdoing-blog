@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-npm run build
+yarn build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -28,5 +28,5 @@ git add -A
 git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
 
-# cd -
-# rm -rf docs/.vuepress/dist
+cd -
+rm -rf docs/.vuepress/dist

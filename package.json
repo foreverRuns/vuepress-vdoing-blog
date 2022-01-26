@@ -8,9 +8,19 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh",
+    "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D"
   },
   "devDependencies": {
     "vuepress": "^1.9.7"
+  },
+  "dependencies": {
+    "add": "^2.0.6",
+    "dayjs": "^1.10.7",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
+    "vuepress-plugin-zooming": "^1.1.8",
+    "vuepress-theme-vdoing": "^1.9.4"
   }
 }

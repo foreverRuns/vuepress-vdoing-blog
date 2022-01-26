@@ -1,0 +1,125 @@
+/* .vuepress/styles/index.styl */
+
+// 权重要够
+#app .theme-container .home-wrapper .banner {
+  // 重置 .banner 中的 margin-top: 3.6rem; 为 padding-top: 3.6rem;
+  // 解决主页高度够用也出现滚动条 (由于.theme-container 中 min-height: 100vh; 再magrin的话就会始终超出一个屏幕的高度而出现滚动条)
+  margin-top: 0;
+  padding-top: 3.6rem;
+
+  // 使主页banner字体颜色跟随主题设置
+  color: var(--textColor);
+}
+
+.home-wrapper .banner .banner-conent .hero p {
+  // 主页banner heroText下的tagline字体加粗
+  font-weight: 600;
+}
+
+.home-wrapper .banner .banner-conent .feature p, 
+.home-wrapper .banner .banner-conent .feature h2 {
+  // 主页 feature 字体加粗
+  font-weight: bold!important;
+}
+
+// 解决目录页宽度够用也换行，使其展示正常
+.catalogue-wrapper .catalogue-content dl.inline a:not(.header-anchor) {
+  width: 100%!important;
+}
+
+// footer 让页脚固定在页面底部 
+.theme-container {
+  position: relative;
+}
+
+.theme-container .home-wrapper,
+.theme-container .page,
+.theme-container .custom-page {
+  // footer 大概的高度
+  padding-bottom: calc(9.65rem + 12px + 2rem);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%!important;
+}
+
+// 侧边栏目录按钮颜色
+.theme-container .sidebar-button {
+  color: black;
+  background-color: white;
+  opacity: 0.6;
+}
+
+// vuepress-plugin-comment 评论区颜色重置
+.gt-container
+  .gt-ico-tip
+    &::after
+      content: '。( Win + . ) 或 ( ⌃ + ⌘ + ␣ ) 打开表情'
+      color: #999
+      font-size: .8rem
+  .gt-meta
+    border-color var(--borderColor)!important
+  .gt-comments-null
+    color var(--textColor)
+    opacity .5
+  .gt-header-textarea
+    color var(--textColor)
+    background rgba(180,180,180,0.1)!important
+  .gt-btn
+    border-color $accentColor!important
+    background-color $accentColor!important
+  .gt-btn-preview
+    background-color rgba(255,255,255,0)!important
+    color $accentColor!important
+  a
+    color $accentColor!important
+  .gt-svg svg
+    fill $accentColor!important
+  .gt-comment-content,.gt-comment-admin .gt-comment-content
+    background-color rgba(150,150,150,0.1)!important
+    &:hover
+      box-shadow 0 0 25px rgba(150,150,150,.5)!important
+    .gt-comment-body
+      color var(--textColor)!important
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+// ::-webkit-scrollbar
+// {
+//   width: 8px;
+//   height: 8px;
+//   border-radius: 10px;
+//   background-color: #F5F5F5;
+// }
+// /*定义滚动条轨道 内阴影+圆角*/
+// ::-webkit-scrollbar-track
+// {
+//   border-radius: 10px;
+//   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+//   background-color: #F5F5F5;
+// }
+// /*定义滑块 内阴影+圆角*/
+// ::-webkit-scrollbar-thumb
+// {
+//   border-radius: 10px;
+//   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+//   border-radius: 10px;
+//   /* 线性渐变 */
+//   background-image: -webkit-gradient(linear, 
+//   left bottom, left top,
+//    color-stop(0.44, rgb(60,186,146)), 
+//    color-stop(0.72, rgb(253,187,45)), 
+//    color-stop(0.86, rgb(253,187,45)));
+//   transition: 0.3s ease-in-out;
+// }
+// /*定义滑块悬浮样式*/
+// ::-webkit-scrollbar-thumb:hover{
+//   background-image: -webkit-gradient(linear, 
+//   left bottom, left top, 
+//   color-stop(0.44, rgb(253,187,45)), 
+//   olor-stop(0.72, rgb(253,187,45)), 
+//   color-stop(0.86, rgb(60,186,146)));
+//   transition: 0.3s ease-in-out;
+// }

@@ -24,14 +24,11 @@ else
   # Omit --global to set the identity only in this repository.
   git config --global user.name "RunSS11"
   git config --global user.email "894985240@qq.com"
-  #
 fi
-git config user.name "RunSS11"
-git config user.email "894985240@qq.com"
 git init 
 git add -A
 git commit -m "${msg}"
-git push -f $githubUrl master:gh-pages # 将上面master分支 推送到 blog仓库下的 gh-pages分支
+git push -f $githubUrl master:gh-pages # 将上面项目的master分支 推送到 blog仓库下的 gh-pages分支
 
 # 退回开始所在目录
 cd -

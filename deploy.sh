@@ -21,13 +21,16 @@ else
   msg='来自github actions的自动部署'
   # githubUrl=https://foreverRuns:${GITHUB_TOKEN}@github.com/foreverRuns/vuepress-vdoing-blog.git
   githubUrl=https://foreverRuns:${GITHUB_TOKEN}@github.com/foreverRuns/blog.git
+  # Omit --global to set the identity only in this repository.
   git config --global user.name "RunSS11"
   git config --global user.email "894985240@qq.com"
+  #
 fi
-git init
+git init 
 git add -A
 git commit -m "${msg}"
-git push -f $githubUrl main:gh-pages # 将工程下的main分支 推送到 blog仓库下的 gh-pages分支
+git branch
+git push -f $githubUrl master:gh-pages # 将上面master分支 推送到 blog仓库下的 gh-pages分支
 
 cd -
 rm -rf docs/.vuepress/dist

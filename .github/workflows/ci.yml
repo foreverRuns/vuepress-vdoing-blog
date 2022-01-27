@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout # 步骤1
-        uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+        uses: actions/checkout@v2 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
@@ -32,11 +32,22 @@ jobs:
           # CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
         run: yarn && yarn deploy
 
-      # - name: Build and Deploy # 步骤3 （只提交到github可以使用这个步骤）
-      #   uses: JamesIves/github-pages-deploy-action@master # 作用：将项目构建和部署到github。 https://github.com/JamesIves/github-pages-deploy-action
-      #   env: # 设置环境变量
-      #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
-      #     BASE_BRANCH: master # 要部署的文件夹所在的分支.
-      #     BRANCH: gh-pages # 部署到的分支
-      #     FOLDER: docs/.vuepress/dist # 要部署的文件夹.
-      #     BUILD_SCRIPT: npm install && npm run build && cd docs/.vuepress/dist && echo 'xugaoyi.com' > CNAME && cd - # 部署前要执行的命令（记得cd进入某个目录后，后面要cd -退回开始的目录）
+      # 步骤3 （只需要github action自动部署, 不需要本地部署的可以使用这个步骤）
+      # - name: Install and Build # npm install npm run build
+      #   run: |
+      #     yarn
+      #     yarn build
+      #     # cd docs/.vuepress/dist
+      #     # echo 'xxx.com' > CNAME
+      #     # cd -
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@v4.2.2 # V4 开始不需要添加 token ，如果添加会报 128 错误
+      #   with:
+      #     branch: gh-pages # The branch the action should deploy to.
+      #     folder: docs/.vuepress/dist # The folder the action should deploy.
+      #     # This option defaults to the repository scoped GitHub Token.
+      #     # 2021年8月13日开始，GitHub不再支持密码验证解决方案，需要使用token登录
+      #     # JamesIves/github-pages-deploy-action v4 版本默认使用仓库登录的token
+      #     # 如果你只是部署到本仓库的gh-pages下，不需要再提供token了，如果添加会报 128 错误
+      #     # 如果你需要部署到其他仓库，只需要提供 access token
+      #     token: ${{ secrets.ACCESS_TOKEN }}

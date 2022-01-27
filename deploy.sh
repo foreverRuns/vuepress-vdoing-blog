@@ -10,8 +10,8 @@ yarn build
 cd docs/.vuepress/dist
 
 # deploy to github pages
-# 如果发布到自定义域名，请打开并填写你的域名
-# echo 'www.xxx.com' > CNAME
+# 如果发布到自定义域名，请使用，不填则使用 GitHub 自带的 <username>.github.io
+echo 'runs.com' > CNAME
 
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy'
@@ -26,6 +26,8 @@ else
   git config --global user.email "894985240@qq.com"
   #
 fi
+git config user.name "RunSS11"
+git config user.email "894985240@qq.com"
 git init 
 git add -A
 git commit -m "${msg}"

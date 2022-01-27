@@ -925,20 +925,20 @@
 
 "@better-scroll/core@^2.0.0-beta.6", "@better-scroll/core@^2.4.2":
   version "2.4.2"
-  resolved "https://registry.nlark.com/@better-scroll/core/download/@better-scroll/core-2.4.2.tgz#e69470012d79923a18034c3e4931720fbb06eae5"
-  integrity sha1-5pRwAS15kjoYA0w+STFyD7sG6uU=
+  resolved "https://registry.npmjs.org/@better-scroll/core/-/core-2.4.2.tgz#e69470012d79923a18034c3e4931720fbb06eae5"
+  integrity sha512-IqVZLnh04YpaEAy9wJDxtFK/stxVQjB9A9Wcr3Uwkj7Av1TtFpin+t/TObl53diNDG5ZJ+vck/OAthphpuugLA==
   dependencies:
     "@better-scroll/shared-utils" "^2.4.2"
 
 "@better-scroll/shared-utils@^2.4.2":
   version "2.4.2"
-  resolved "https://registry.npmmirror.com/@better-scroll/shared-utils/download/@better-scroll/shared-utils-2.4.2.tgz#1ac5c97495727093a22a8009560795dd5e3c18da"
-  integrity sha1-GsXJdJVycJOiKoAJVgeV3V48GNo=
+  resolved "https://registry.npmjs.org/@better-scroll/shared-utils/-/shared-utils-2.4.2.tgz#1ac5c97495727093a22a8009560795dd5e3c18da"
+  integrity sha512-Gy/Jfbpu+hq0u+PcjkTqyXGqAf+0dexTzEZ5IDXEVwJVLmd3cx8A73oTcAZ8QZgk4wSHvlMjXecSaptkhnNPEw==
 
 "@better-scroll/slide@^2.0.0-beta.6":
   version "2.4.2"
-  resolved "https://registry.nlark.com/@better-scroll/slide/download/@better-scroll/slide-2.4.2.tgz#024528ae57516a2ee99bea346381589e4e6a039c"
-  integrity sha1-AkUorldRai7pm+o0Y4FYnk5qA5w=
+  resolved "https://registry.npmjs.org/@better-scroll/slide/-/slide-2.4.2.tgz#024528ae57516a2ee99bea346381589e4e6a039c"
+  integrity sha512-VfdFHm/meo4nEyfx0JLn8rUHfQdQCnoBHs/BsV+vmjVivKg+cVgfS+QaytrIulWKqNAWNlfXbAaNtZMv8gNKZg==
   dependencies:
     "@better-scroll/core" "^2.4.2"
 
@@ -2636,7 +2636,7 @@ chalk@^3.0.0:
 
 chalk@^4.0.0:
   version "4.1.2"
-  resolved "https://registry.npmmirror.com/chalk/download/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
+  resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
   dependencies:
     ansi-styles "^4.1.0"
@@ -3451,7 +3451,7 @@ debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "2.1.2"
 
-debuglog@*, debuglog@^1.0.1:
+debuglog@^1.0.1:
   version "1.0.1"
   resolved "https://registry.nlark.com/debuglog/download/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
   integrity sha1-qiT/uaw9+aI1GDfPstJ5NgzXhJI=
@@ -4830,8 +4830,8 @@ globby@^9.2.0:
 
 good-storage@^1.1.1:
   version "1.1.1"
-  resolved "https://registry.nlark.com/good-storage/download/good-storage-1.1.1.tgz#081501c01607d5fee2a214f94e8f5f9cb994789f"
-  integrity sha1-CBUBwBYH1f7iohT5To9fnLmUeJ8=
+  resolved "https://registry.npmjs.org/good-storage/-/good-storage-1.1.1.tgz#081501c01607d5fee2a214f94e8f5f9cb994789f"
+  integrity sha512-+0UEpRT03fJgEJoeTVVz41ISC5+jaQrDIWatQ4BoDQfOiBBsjNanymi9sAtLFdEAADQN0FYR8mGpeqxSCe8oXQ==
 
 got@^6.7.1:
   version "6.7.1"
@@ -5322,7 +5322,7 @@ import-local@^2.0.0:
     pkg-dir "^3.0.0"
     resolve-cwd "^2.0.0"
 
-imurmurhash@*, imurmurhash@^0.1.4:
+imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npm.taobao.org/imurmurhash/download/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
@@ -5943,7 +5943,7 @@ json-stringify-safe@~5.0.1:
 
 json2yaml@^1.1.0:
   version "1.1.0"
-  resolved "https://registry.nlark.com/json2yaml/download/json2yaml-1.1.0.tgz#5414d907f9816586b80c513ec2e3aeb2ab819a6c"
+  resolved "https://registry.npmjs.org/json2yaml/-/json2yaml-1.1.0.tgz#5414d907f9816586b80c513ec2e3aeb2ab819a6c"
   integrity sha1-VBTZB/mBZYa4DFE+wuOusquBmmw=
   dependencies:
     remedial "1.x"
@@ -6328,11 +6328,6 @@ lockfile@^1.0.4:
   dependencies:
     signal-exit "^3.0.2"
 
-lodash._baseindexof@*:
-  version "3.1.0"
-  resolved "https://registry.nlark.com/lodash._baseindexof/download/lodash._baseindexof-3.1.0.tgz#fe52b53a1c6761e42618d654e4a25789ed61822c"
-  integrity sha1-/lK1OhxnYeQmGNZU5KJXie1hgiw=
-
 lodash._baseuniq@~4.6.0:
   version "4.6.0"
   resolved "https://registry.npmmirror.com/lodash._baseuniq/download/lodash._baseuniq-4.6.0.tgz#0ebb44e456814af7905c6212fa2c9b2d51b841e8"
@@ -6341,32 +6336,10 @@ lodash._baseuniq@~4.6.0:
     lodash._createset "~4.0.0"
     lodash._root "~3.0.0"
 
-lodash._bindcallback@*:
-  version "3.0.1"
-  resolved "https://registry.nlark.com/lodash._bindcallback/download/lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e"
-  integrity sha1-5THCdkTPi1epnhftlbNcdIeJOS4=
-
-lodash._cacheindexof@*:
-  version "3.0.2"
-  resolved "https://registry.nlark.com/lodash._cacheindexof/download/lodash._cacheindexof-3.0.2.tgz#3dc69ac82498d2ee5e3ce56091bafd2adc7bde92"
-  integrity sha1-PcaayCSY0u5ePOVgkbr9Ktx73pI=
-
-lodash._createcache@*:
-  version "3.1.2"
-  resolved "https://registry.nlark.com/lodash._createcache/download/lodash._createcache-3.1.2.tgz#56d6a064017625e79ebca6b8018e17440bdcf093"
-  integrity sha1-VtagZAF2JeeevKa4AY4XRAvc8JM=
-  dependencies:
-    lodash._getnative "^3.0.0"
-
 lodash._createset@~4.0.0:
   version "4.0.3"
   resolved "https://registry.nlark.com/lodash._createset/download/lodash._createset-4.0.3.tgz#0f4659fbb09d75194fa9e2b88a6644d363c9fe26"
   integrity sha1-D0ZZ+7CddRlPqeK4imZE02PJ/iY=
-
-lodash._getnative@*, lodash._getnative@^3.0.0:
-  version "3.9.1"
-  resolved "https://registry.nlark.com/lodash._getnative/download/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
-  integrity sha1-VwvH3t5G1hzc3mh9ZdPuy6o6r/U=
 
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
@@ -6397,11 +6370,6 @@ lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.npm.taobao.org/lodash.memoize/download/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
-
-lodash.restparam@*:
-  version "3.6.1"
-  resolved "https://registry.nlark.com/lodash.restparam/download/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
-  integrity sha1-k2pOMJ7zMKdkXtQUWYbIWuWyCAU=
 
 lodash.template@^4.5.0:
   version "4.5.0"
@@ -8735,8 +8703,8 @@ relateurl@0.2.x:
 
 remedial@1.x:
   version "1.0.8"
-  resolved "https://registry.nlark.com/remedial/download/remedial-1.0.8.tgz#a5e4fd52a0e4956adbaf62da63a5a46a78c578a0"
-  integrity sha1-peT9UqDklWrbr2LaY6WkanjFeKA=
+  resolved "https://registry.npmjs.org/remedial/-/remedial-1.0.8.tgz#a5e4fd52a0e4956adbaf62da63a5a46a78c578a0"
+  integrity sha512-/62tYiOe6DzS5BqVsNpH/nkGlX45C/Sp6V+NtiN6JQNS1Viay7cWkazmRkrQrdFj2eshDe96SIQNIoMxqhzBOg==
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -10427,7 +10395,7 @@ vuepress-plugin-zooming@^1.1.8:
 
 vuepress-theme-vdoing@^1.9.4:
   version "1.9.4"
-  resolved "https://registry.npmmirror.com/vuepress-theme-vdoing/download/vuepress-theme-vdoing-1.9.4.tgz#8ff31852ab760db628c58a440aef3841ca724c72"
+  resolved "https://registry.npmjs.org/vuepress-theme-vdoing/-/vuepress-theme-vdoing-1.9.4.tgz#8ff31852ab760db628c58a440aef3841ca724c72"
   integrity sha512-vq7aqZibTUjKeHI49Zt2VKtzjopCzSKjw+XMLpXIPPDf+KijEwI5nKLnJXMpzNFkMZwp+CRDGupctPRUu9+3Hw==
   dependencies:
     "@better-scroll/core" "^2.0.0-beta.6"

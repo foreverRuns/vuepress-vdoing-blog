@@ -32,5 +32,7 @@ git commit -m "${msg}"
 git branch
 git push -f $githubUrl master:gh-pages # 将上面master分支 推送到 blog仓库下的 gh-pages分支
 
+# 退回开始所在目录
 cd -
+# 删除打包项目
 rm -rf docs/.vuepress/dist

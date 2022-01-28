@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+      - mater
   # 支持手动，方便测试 (在github仓库的action下对应的action开启了Runs workflow 按钮)
   workflow_dispatch:
 

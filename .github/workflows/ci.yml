@@ -1,28 +1,27 @@
 name: CI
 
-#on: [push]
-
-# 在master分支发生push事件时触发。
+# 触发条件
 on:
+  # 在master分支发生push事件时触发。
   push:
     branches:
       - main
-  # 支持手动，方便测试
+  # 支持手动，方便测试 (在github仓库的action下对应的action开启了Runs workflow 按钮)
   workflow_dispatch:
 
 env: # 设置环境变量
   TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用时区时间）
 
-jobs:
+jobs: # 工作流
   build: # 自定义名称
-    runs-on: ubuntu-latest # 运行在虚拟机环境ubuntu-latest
+    runs-on: ubuntu-latest # 运行在最新的ubuntu虚拟机环境
 
     strategy:
       matrix:
         node-version: [14.x]
 
     steps:
-      - name: Checkout # 步骤1
+      - name: Checkout # 步骤1 拉取代码
         uses: actions/checkout@v2 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
 
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
@@ -32,9 +31,9 @@ jobs:
 
       - name: run deploy.sh # 步骤3
         env: # 设置环境变量
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量 (在 仓库/Settings/Secrets/Actions/ 下， New repository secret 创建)
           # CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
-        run: yarn && yarn deploy
+        run: yarn && yarn deploy # 安装依赖，执行deploy.sh
 
       # 步骤3 （只需要github action自动部署, 不需要本地部署的可以使用这个步骤）
       # - name: Install and Build # npm install npm run build
@@ -55,3 +54,27 @@ jobs:
       #     # 如果你只是部署到本仓库的gh-pages下，不需要再提供token了，如果添加会报 128 错误
       #     # 如果你需要部署到其他仓库，只需要提供 access token
       #     token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Mirror To Gitee # 步骤4：将 GitHub 仓库同步到 Gitee 仓库
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }} # id_rsa 私钥
+        with: # source-repo 同步到 destination-repo
+          source-repo: 'git@github.com:foreverRuns/vuepress-vdoing-blog.git' # Github 仓库地址
+          destination-repo: 'git@gitee.com:runss11/blog.git' # Gitee 仓库地址
+
+      - name: Build Gitee Pages # 步骤5：自动部署到 Gitee Pages
+        uses: yanglbme/gitee-pages-action@master
+        with:
+          # Gitee 用户名
+          gitee-username: RunSS11
+          # 在Settings/Secrets/Actions/New repository secret/ 新建 GITEE_PASSWORD，存放你的 Gitee 帐户密码
+          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+          #  Gitee 仓库地址，仓库名严格区分大小写，一般地址和仓库名一致，如果地址改了，仓库名不改，要以地址为准（地址仅需后缀，即 https://gitee.com/<username>/xxx 的 xxx 即可）
+          gitee-repo: blog/vuepress-vdoing-blog
+          # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
+          branch: gh-pages
+          # 要部署的分支上的目录
+          # directory:
+          # 是否强制使用 HTTPS, 默认true
+          # https: true

@@ -8,10 +8,11 @@ module.exports = {
   logo: '/img/logo.png', // 导航栏logo
   searchMaxSuggestions: 10, // 搜索结果显示最大数
   lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
+  // 配置repo后，导航栏右侧生成Github链接，并在页面的底部生成一个默认的 "Edit this page" 链接，可通过editLinkText修改
+  repo: 'foreverRuns/vuepress-vdoing-blog',
   docsDir: 'docs', // 编辑的文件夹
   editLinks: true, // 启用编辑
-  editLinkText: '编辑',
-  // repo: 'foreverRuns/vuepress-vdoing-blog', // 导航栏右侧生成Github链接
+  editLinkText: '编辑此页',
 
   //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
   // 随机图片API

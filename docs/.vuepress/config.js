@@ -29,7 +29,10 @@ module.exports = {
 
   // 默认'/'。如果你想将你的网站部署到如 https://username.github.io/blog/，那么 base 应该被设置成 "/blog/",（否则页面将失去样式等文件）
   base: '/blog/',
-
+  // 显示代码块的行号
+  markdown: {
+    lineNumbers: true,
+  },
   // 主题配置
   themeConfig,
 

@@ -1,8 +1,11 @@
 name: gitee
 
 on:
-  push:
-    branches: [main, master]
+  # 在分离的 'ci' workflow 完成之后运行
+  workflow_run:
+    workflows: [ci]
+    types:
+      - completed
   # 支持手动，方便测试 (在github仓库的action下对应的action开启了Runs workflow 按钮)
   workflow_dispatch:
 

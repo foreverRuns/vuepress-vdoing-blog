@@ -11,6 +11,7 @@ module.exports = {
   // 配置repo后，导航栏右侧生成Github链接，并在页面的底部生成一个默认的 "Edit this page" 链接，可通过editLinkText修改
   repo: 'foreverRuns/vuepress-vdoing-blog',
   docsDir: 'docs', // 编辑的文件夹
+  docsBranch: 'main', // 文档放在main分支下
   editLinks: true, // 启用编辑
   editLinkText: '编辑此页',
 

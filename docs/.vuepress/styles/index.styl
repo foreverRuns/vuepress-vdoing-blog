@@ -52,37 +52,81 @@
   opacity: 0.6;
 }
 
-// vuepress-plugin-comment 评论区颜色重置
-.gt-container
-  .gt-ico-tip
-    &::after
-      content: '。( Win + . ) 或 ( ⌃ + ⌘ + ␣ ) 打开表情'
-      color: #999
-      font-size: .8rem
-  .gt-meta
-    border-color var(--borderColor)!important
-  .gt-comments-null
+// vuepress-plugin-comment gitalk评论区颜色重置
+// .gt-container
+//   .gt-ico-tip
+//     &::after
+//       content: '。( Win + . ) 或 ( ⌃ + ⌘ + ␣ ) 打开表情'
+//       color: #999
+//       font-size: .8rem
+//   .gt-meta
+//     border-color var(--borderColor)!important
+//   .gt-comments-null
+//     color var(--textColor)
+//     opacity .5
+//   .gt-header-textarea
+//     color var(--textColor)
+//     background rgba(180,180,180,0.1)!important
+//   .gt-btn
+//     border-color $accentColor!important
+//     background-color $accentColor!important
+//   .gt-btn-preview
+//     background-color rgba(255,255,255,0)!important
+//     color $accentColor!important
+//   a
+//     color $accentColor!important
+//   .gt-svg svg
+//     fill $accentColor!important
+//   .gt-comment-content,.gt-comment-admin .gt-comment-content
+//     background-color rgba(150,150,150,0.1)!important
+//     &:hover
+//       box-shadow 0 0 25px rgba(150,150,150,.5)!important
+//     .gt-comment-body
+//       color var(--textColor)!important
+
+// vuepress-plugin-comment aline 评论区样式设置
+#valine-vuepress-comment
+  .vpanel
     color var(--textColor)
-    opacity .5
-  .gt-header-textarea
-    color var(--textColor)
-    background rgba(180,180,180,0.1)!important
-  .gt-btn
-    border-color $accentColor!important
-    background-color $accentColor!important
-  .gt-btn-preview
-    background-color rgba(255,255,255,0)!important
-    color $accentColor!important
-  a
-    color $accentColor!important
-  .gt-svg svg
-    fill $accentColor!important
-  .gt-comment-content,.gt-comment-admin .gt-comment-content
-    background-color rgba(150,150,150,0.1)!important
-    &:hover
-      box-shadow 0 0 25px rgba(150,150,150,.5)!important
-    .gt-comment-body
-      color var(--textColor)!important
+    background rgba(180,180,180,0.1)
+    margin-top 20px
+    .vedit
+      #veditor
+        background url('/img/comment.png')
+        background-position 95% 95%
+        background-size 16rem 10rem
+        background-repeat no-repeat
+    .vrow
+      .vbtn
+        border-color $accentColor
+        background-color $accentColor
+        color white
+  .vcards
+    .vh
+      border-bottom none!important
+    .vcard
+      color var(--textColor)
+      background rgba(180,180,180,0.1)
+      margin 20px 0
+      padding-top 10px!important
+      box-shadow 0 0 15px rgba(150,150,150,.5)!important
+      &:hover
+        box-shadow 0 0 15px rgb(150,150,150,.5)!important
+      .vquote
+        color var(--textColor)
+        padding-left 0!important
+        border-left none!important
+        .vcard
+          margin-right 20px
+          box-shadow 0 0 8px rgba(150, 150, 150, 0.5)!important
+      .vnick
+      .vat
+      .at
+        color $accentColor
+      .vat
+        padding-right 20px
+      .vimg
+        margin-left: 10px
 
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/

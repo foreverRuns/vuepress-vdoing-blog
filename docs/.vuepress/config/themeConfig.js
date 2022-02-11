@@ -1,15 +1,17 @@
-const nav = require('./themeConfig/nav.js')
+const { nav, navBefore } = require('./themeConfig/nav.js')
 const htmlModules = require('./themeConfig/htmlModules.js')
 
 // 主题配置
 module.exports = {
   nav,
+  navBefore,
   sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
   logo: '/img/logo.png', // 导航栏logo
   searchMaxSuggestions: 10, // 搜索结果显示最大数
   lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
   // 配置repo后，导航栏右侧生成Github链接，并在页面的底部生成一个默认的 "Edit this page" 链接，可通过editLinkText修改
   repo: 'foreverRuns/vuepress-vdoing-blog',
+  repoLink: false,
   docsDir: 'docs', // 编辑的文件夹
   docsBranch: 'main', // 文档放在main分支下
   editLinks: true, // 启用编辑

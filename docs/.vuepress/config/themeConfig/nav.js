@@ -47,7 +47,7 @@ module.exports = [
   { text: '关于', link: '/about/' },
   {
     text: '索引',
-    link: '/archives/',
+    link: '/categories/',
     items: [
       { text: '分类', link: '/categories/' },
       { text: '标签', link: '/tags/' },

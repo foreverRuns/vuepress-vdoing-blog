@@ -54,6 +54,7 @@ module.exports = [
         el: '#valine-vuepress-comment',
         appId: 'kSuYQbsktbororUwyB5jrkWR-gzGzoHsz',
         appKey: '5lmYX007fLIKRmfgkjr906P2',
+        path: '<%- frontmatter.commentid || frontmatter.permalink %>',
         placeholder: '评论点啥 ~~~', // 评论框占位提示符, '写个昵称标识一下自己\n留下邮箱可以收到回复\n留下网址让别人访问你\n'
         avatar: 'monsterid', // 小怪物头像. 目前非自定义头像有7种默认值可选: https://valine.js.org/avatar.html
         pageSize: 10, // 评论列表分页，每页条数

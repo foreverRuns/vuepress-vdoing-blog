@@ -10,8 +10,9 @@ on:
   workflow_dispatch:
 
 jobs: # 工作流
-  build: # 自定义名称
+  ci-success: # 自定义名称 ci.yml运行成功时才会执行
     runs-on: ubuntu-latest # 运行在最新的ubuntu虚拟机环境
+    if: ${{ github.event.workflow_run.conclusion == 'success' }} # 失败时执行是 'failure'
     steps:
       - name: Mirror To Gitee # 步骤4：将 GitHub 仓库同步到 Gitee 仓库
         uses: wearerequired/git-mirror-action@master

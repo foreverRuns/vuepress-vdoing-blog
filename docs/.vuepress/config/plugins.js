@@ -1,3 +1,6 @@
+// const { clientID, clientSecret } = require('./secrets.js')
+const { appId, appKey } = require('./secrets.js')
+
 // 插件配置 插件名字前缀 vuepress-plugin- 可以省略
 module.exports = [
   [
@@ -33,8 +36,8 @@ module.exports = [
     // {
     //   choosen: 'gitalk',
     //   options: {
-    //     clientID: '333524d9ba69991f1b12',
-    //     clientSecret: '25a2b7dd5c9bd44ebfb9f01b4a2e5430019c9718',
+    //     clientID,
+    //     clientSecret,
     //     repo: 'gitalk-comment-blog', // GitHub 仓库
     //     owner: 'foreverRuns', // GitHub仓库所有者
     //     admin: ['foreverRuns'], // 对仓库有写权限的人
@@ -52,8 +55,8 @@ module.exports = [
       choosen: 'valine',
       options: {
         el: '#valine-vuepress-comment',
-        appId: 'kSuYQbsktbororUwyB5jrkWR-gzGzoHsz',
-        appKey: '5lmYX007fLIKRmfgkjr906P2',
+        appId,
+        appKey,
         path: '<%- frontmatter.commentid || frontmatter.permalink %>',
         placeholder: '评论点啥 ~~~', // 评论框占位提示符, '写个昵称标识一下自己\n留下邮箱可以收到回复\n留下网址让别人访问你\n'
         avatar: 'monsterid', // 小怪物头像. 目前非自定义头像有7种默认值可选: https://valine.js.org/avatar.html

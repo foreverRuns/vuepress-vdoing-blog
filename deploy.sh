@@ -3,6 +3,16 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+# 如果是 github action 自动部署，动态生成 secret.js. (因为私密性，本地的 secret.js 记录在 .gitignore 中，不会上传到仓库)
+if [ "$GITHUB_TOKEN" ]; then
+  echo "module.exports = {
+    // clientID: '${GITALK_CLIENTID}',
+    // clientSecret: '${GITALK_CLIENTSECRET}',
+    appId: '${VALINE_APPID}',
+    appKey: '${VALINE_APPKEY}'
+  }" > docs/.vuepress/config/secrets.js
+fi
+
 # 生成静态文件
 yarn build
 
@@ -18,7 +28,7 @@ if [ -z "$GITHUB_TOKEN" ]; then
   # githubUrl=git@github.com:foreverRuns/vuepress-vdoing-blog.git
   githubUrl=git@github.com:foreverRuns/blog.git
 else
-  msg='GithuGb ActiAons 自动部署'
+  msg='Github actions 自动部署'
   # githubUrl=https://foreverRuns:${GITHUB_TOKEN}@github.com/foreverRuns/vuepress-vdoing-blog.git
   githubUrl=https://foreverRuns:${GITHUB_TOKEN}@github.com/foreverRuns/blog.git
   # Omit --global to set the identity only in this repository.

@@ -34,6 +34,10 @@ jobs: # 工作流
         env: # 设置环境变量
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量 (在 仓库/Settings/Secrets/Actions/ 下， New repository secret 创建)
           # CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
+          VALINE_APPID: ${{ secrets.VALINE_APPID }}
+          VALINE_APPKEY: ${{ secrets.VALINE_APPKEY }}
+          # GITALK_CLIENTID: ${{ secrets.GITALK_CLIENTID }}
+          # GITALK_CLIENTSECRET: ${{ secrets.GITALK_CLIENTSECRET }}
         run: yarn && yarn deploy # 安装依赖，执行deploy.sh
 
 

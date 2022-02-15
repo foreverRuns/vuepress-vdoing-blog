@@ -76,7 +76,8 @@ export default {
 
     repoLink() {
       const { repo, repoLink } = this.$site.themeConfig
-      if (repo && repoLink) {
+      // repoLink 默认为true
+      if (repo && repoLink !== false) {
         return /^https?:/.test(repo) ? repo : `https://github.com/${repo}`
       }
       return null

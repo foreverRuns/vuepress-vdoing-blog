@@ -9,9 +9,11 @@ module.exports = {
   logo: '/img/logo.png', // 导航栏logo
   searchMaxSuggestions: 10, // 搜索结果显示最大数
   lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
-  // 配置repo后，导航栏右侧生成Github链接，并在页面的底部生成一个默认的 "Edit this page" 链接，可通过editLinkText修改
+  // 配置repo后，导航栏右侧生成相应的 repoLabel 链接，并在页面的底部生成一个默认的 "Edit this page" 链接，可通过editLinkText修改
   repo: 'foreverRuns/vuepress-vdoing-blog',
-  repoLink: false,
+  // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为 "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+  // repoLabel: '查看源码',
+  repoLink: false, // 继承后新增的配置项，不显示顶部导航栏右边 repoLabel 链接
   docsDir: 'docs', // 编辑的文件夹
   docsBranch: 'main', // 文档放在main分支下
   editLinks: true, // 启用编辑

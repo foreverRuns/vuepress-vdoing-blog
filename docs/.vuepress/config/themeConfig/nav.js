@@ -10,7 +10,8 @@ module.exports = {
         { text: '后端', link: '/article/server/' },
         { text: 'Linux', link: '/article/linux/' },
         { text: 'Openssl', link: '/article/openssl/' },
-        { text: 'Level2', link: '/article/other/' },
+        { text: 'Level2', link: '/article/level2/' },
+        { text: '其他', link: '/article/other/' },
       ],
     },
     {

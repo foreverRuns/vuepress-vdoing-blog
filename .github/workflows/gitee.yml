@@ -1,36 +1,44 @@
 name: gitee
 
 on:
-  # 在分离的 'ci' workflow 完成之后运行
+  # 在 'ci.yml' workflow 完成之后运行
   workflow_run:
     workflows: [ci]
     types:
       - completed
-  # 支持手动，方便测试 (在github仓库的action下对应的action开启了Runs workflow 按钮)
+  # 支持手动，方便测试 (在github仓库的 action 下对应的 action 开启了 Runs workflow 按钮)
   workflow_dispatch:
 
 jobs: # 工作流
-  ci-success: # 自定义名称 ci.yml运行成功时才会执行
+  ci-success: # 自定义名称, ci.yml 运行成功时才会执行
     runs-on: ubuntu-latest # 运行在最新的ubuntu虚拟机环境
     if: ${{ github.event.workflow_run.conclusion == 'success' }} # 失败时执行是 'failure'
     steps:
-      - name: Mirror To Gitee # 步骤4：将 GitHub 仓库同步到 Gitee 仓库
+      - name: Mirror To Gitee # 步骤1：将 GitHub 仓库同步到 Gitee 仓库
         uses: wearerequired/git-mirror-action@master
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }} # id_rsa 私钥
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_RSA_PRIVATE_KEY }} # id_rsa 私钥
         with: # source-repo 同步到 destination-repo
           source-repo: 'git@github.com:foreverRuns/vuepress-vdoing-blog.git' # Github 仓库地址
+          destination-repo: 'git@gitee.com:runss11/vuepress-vdoing-blog.git' # Gitee 仓库地址
+
+      - name: Mirror To Gitee # 步骤2：将 GitHub 仓库同步到 Gitee 仓库
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_RSA_PRIVATE_KEY }} # id_rsa 私钥
+        with: # source-repo 同步到 destination-repo
+          source-repo: 'git@github.com:foreverRuns/blog.git' # Github 仓库地址
           destination-repo: 'git@gitee.com:runss11/blog.git' # Gitee 仓库地址
 
-      - name: Build Gitee Pages # 步骤5：自动部署到 Gitee Pages
+      - name: Build Gitee Pages # 步骤3：自动部署到 Gitee Pages
         uses: yanglbme/gitee-pages-action@master
         with:
           # Gitee 用户名
           gitee-username: RunSS11
           # 在Settings/Secrets/Actions/New repository secret/ 新建 GITEE_PASSWORD，存放你的 Gitee 帐户密码
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
-          #  Gitee 仓库地址，仓库名严格区分大小写，一般地址和仓库名一致，如果地址改了，仓库名不改，要以地址为准（地址仅需后缀，即 https://gitee.com/<username>/xxx 的 xxx 即可）
-          gitee-repo: blog/vuepress-vdoing-blog
+          #  Gitee 仓库地址，（地址仅需后缀，即 https://gitee.com/<username>/xxx 的 <username>/xxx 即可）
+          gitee-repo: runss11/blog
           # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
           branch: gh-pages
           # 要部署的分支上的目录

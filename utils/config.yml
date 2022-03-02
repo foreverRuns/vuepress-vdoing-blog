@@ -1,0 +1,18 @@
+# 批量添加和修改、删除 front matter 配置文件
+
+# 需要批量处理的路径，docs/文件夹/<文件夹>。(数组。映射路径：docs/arr[1]/arr[2] ... )
+path:
+  - docs # 第一个成员必须是docs
+  - 02.专栏
+  - 01.Markdown入门教程
+
+# 要删除的字段 (数组)
+delete:
+  - article
+
+  # 要添加、修改 front matter 的数据 （front matter 中没有的数据则添加，已有的数据则覆盖）
+data:
+  sidebar: false
+  author:
+    name: Runs
+    link: https://github.com/foreverRuns

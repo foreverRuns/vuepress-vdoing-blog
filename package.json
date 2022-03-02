@@ -10,14 +10,17 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh",
+    "efm": "node utils/editFrontMatter.js",
     "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D"
   },
   "devDependencies": {
-    "vuepress": "^1.9.7",
-    "vuepress-theme-vdoing": "^1.9.4",
     "dayjs": "^1.10.7",
+    "inquirer": "^8.2.0",
+    "vuepress": "^1.9.7",
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-one-click-copy": "^1.0.6",
-    "vuepress-plugin-zooming": "^1.1.8"
+    "vuepress-plugin-zooming": "^1.1.8",
+    "vuepress-theme-vdoing": "^1.9.4",
+    "yamljs": "^0.3.0"
   }
 }

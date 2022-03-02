@@ -14,10 +14,7 @@
   },
   "devDependencies": {
     "vuepress": "^1.9.7",
-    "vuepress-theme-vdoing": "^1.9.4"
-  },
-  "dependencies": {
-    "add": "^2.0.6",
+    "vuepress-theme-vdoing": "^1.9.4",
     "dayjs": "^1.10.7",
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-one-click-copy": "^1.0.6",

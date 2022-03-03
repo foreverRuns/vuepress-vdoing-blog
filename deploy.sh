@@ -21,7 +21,7 @@ cd docs/.vuepress/dist
 
 # deploy to github pages
 # 如果发布到自定义域名，请使用，不填则使用 GitHub 自带的 <username>.github.io
-# echo 'blog.runs.cn' > CNAME
+echo 'runss.top' > CNAME
 
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='yarn deploy 本地手动部署'  #yarn deploy

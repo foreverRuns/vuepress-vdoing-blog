@@ -28,7 +28,7 @@ jobs: # 工作流
           SSH_PRIVATE_KEY: ${{ secrets.SSH_RSA_PRIVATE_KEY }} # id_rsa 私钥
         with: # source-repo 同步到 destination-repo
           source-repo: 'git@github.com:foreverRuns/blog.git' # Github 仓库地址
-          destination-repo: 'git@gitee.com:runss11/blog.git' # Gitee 仓库地址
+          destination-repo: 'git@gitee.com:runss11/runss11.git' # Gitee 仓库地址
 
       - name: Build Gitee Pages # 步骤3：自动部署到 Gitee Pages
         uses: yanglbme/gitee-pages-action@master
@@ -38,7 +38,7 @@ jobs: # 工作流
           # 在Settings/Secrets/Actions/New repository secret/ 新建 GITEE_PASSWORD，存放你的 Gitee 帐户密码
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           #  Gitee 仓库地址，（地址仅需后缀，即 https://gitee.com/<username>/xxx 的 <username>/xxx 即可）
-          gitee-repo: runss11/blog
+          gitee-repo: runss11/runss11
           # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
           branch: gh-pages
           # 要部署的分支上的目录

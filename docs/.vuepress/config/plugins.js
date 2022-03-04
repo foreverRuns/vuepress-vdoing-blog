@@ -67,4 +67,8 @@ module.exports = [
       },
     },
   ],
+  [
+    // 百度自动推送
+    'vuepress-plugin-baidu-autopush',
+  ],
 ]

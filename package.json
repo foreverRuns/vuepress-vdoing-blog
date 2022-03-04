@@ -11,12 +11,14 @@
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh",
     "efm": "node utils/editFrontMatter.js",
+    "baidu": "node utils/baiduPush.js https://www.runss.top && bash baiduPush.sh",
     "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D"
   },
   "devDependencies": {
     "dayjs": "^1.10.7",
     "inquirer": "^8.2.0",
     "vuepress": "^1.9.7",
+    "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-comment": "^0.7.3",
     "vuepress-plugin-one-click-copy": "^1.0.6",
     "vuepress-plugin-zooming": "^1.1.8",

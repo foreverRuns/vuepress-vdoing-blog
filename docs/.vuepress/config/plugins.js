@@ -71,4 +71,10 @@ module.exports = [
     // 百度自动推送
     'vuepress-plugin-baidu-autopush',
   ],
+  [
+    'vuepress-plugin-baidu-tongji',
+    {
+      hm: 'bf6cfed288efb307d9ceb444ec379bf3',
+    },
+  ],
 ]

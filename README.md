@@ -15,7 +15,9 @@
 
 :point_right: 站点1：https://runss.top
 
-:point_right: 站点2：https://runss11.gitee.io/
+:point_right: 站点2：https://foreverruns.github.io
+
+:point_right: 站点2：https://runss11.gitee.io
 
 ## 注意事项
 

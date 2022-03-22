@@ -25,12 +25,12 @@ echo 'www.runss.top' > CNAME
 
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='yarn deploy 本地手动部署'  #yarn deploy
-  # githubUrl=git@github.com:foreverRuns/vuepress-vdoing-blog.git
-  githubUrl=git@github.com:foreverRuns/blog.git
+  # githubUrl=https://github.com/foreverRuns/vuepress-vdoing-blog.git
+  githubUrl=https://github.com/foreverRuns/foreverruns.github.io.git
 else
   msg='Github actions 自动部署'
   # githubUrl=https://foreverRuns:${GITHUB_TOKEN}@github.com/foreverRuns/vuepress-vdoing-blog.git
-  githubUrl=https://foreverRuns:${GITHUB_TOKEN}@github.com/foreverRuns/blog.git
+  githubUrl=https://foreverRuns:${GITHUB_TOKEN}@github.com/foreverRuns/foreverruns.github.io.git
   # Omit --global to set the identity only in this repository.
   git config --global user.name "RunSS11"
   git config --global user.email "894985240@qq.com"

@@ -24,6 +24,10 @@ jobs: # 工作流
     steps:
       - name: Checkout # 步骤1 拉取代码
         uses: actions/checkout@v2 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+        with:
+          # Number of commits to fetch. 0 indicates all history for all branches and tags.
+          # Default: 1
+          fetch-depth: 0 # 0 表示获取所有分支和标签的所有历史记录。 (不设置会出现 所有文章底部的 `最近更新时间` 都是最近提交的时间)
 
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs

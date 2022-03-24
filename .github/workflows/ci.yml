@@ -27,7 +27,7 @@ jobs: # 工作流
         with:
           # Number of commits to fetch. 0 indicates all history for all branches and tags.
           # Default: 1
-          fetch-depth: 0 # 0 表示获取所有分支和标签的所有历史记录。 (不设置会出现 所有文章底部的 `最近更新时间` 都是最近提交的时间)
+          fetch-depth: 0 # 0 表示获取所有分支和标签的所有 Commit 记录。 (文章底部的 `最近更新时间` 对应该文章的 commit 提交时间，没有设置这个会出现问题)
 
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs

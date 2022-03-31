@@ -18,8 +18,9 @@ module.exports = {
       text: '专栏',
       link: '/column/',
       items: [
-        { text: 'Markdown入门', link: '/column/md/' },
-        { text: 'ES6标准入门', link: '/column/es6/' },
+        { text: 'Markdown', link: '/column/md/' },
+        { text: 'JavaScript', link: '/column/js/' },
+        { text: 'ECMAScript 6', link: '/column/es6/' },
         // { text: 'Vue3', link: '/column/vue3/'},
         // { text: 'Git入门', link: '/column/git/' },
         // { text: 'JavaScript入门', link: '/column/js/' },

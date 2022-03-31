@@ -4,15 +4,18 @@
 path:
   - docs # 第一个成员必须是docs
   - 02.专栏
-  - 01.Markdown入门教程
+  - 04.JavaScript入门教程
 
 # 要删除的字段 (数组)
 delete:
-  - article
+  - author
 
   # 要添加、修改 front matter 的数据 （front matter 中没有的数据则添加，已有的数据则覆盖）
 data:
-  sidebar: false
+  categories:
+    - JS入门教程
+  tags:
+    - JavaScript
   author:
-    name: Runs
-    link: https://github.com/foreverRuns
+    name: 阮一峰
+    link: https://github.com/wangdoc/javascript-tutorial

@@ -11,6 +11,7 @@ module.exports = {
         { text: 'Linux', link: '/article/linux/' },
         { text: 'Openssl', link: '/article/openssl/' },
         { text: 'Level2', link: '/article/level2/' },
+        { text: '算法', link: '/article/algorithm/' },
         { text: '其他', link: '/article/other/' },
       ],
     },

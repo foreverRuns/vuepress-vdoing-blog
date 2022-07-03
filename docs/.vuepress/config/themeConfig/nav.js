@@ -31,7 +31,10 @@ module.exports = {
     {
       text: '项目',
       link: '/project/',
-      items: [{ text: '本站开发', link: '/project/blog/' }],
+      items: [
+        { text: '本站开发', link: '/project/blog/' },
+        { text: 'FIDO', link: '/project/fido/' },
+      ],
     },
     {
       text: '更多',

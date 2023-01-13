@@ -24,6 +24,7 @@
     "vuepress-plugin-one-click-copy": "^1.0.6",
     "vuepress-plugin-zooming": "^1.1.8",
     "vuepress-theme-vdoing": "^1.9.4",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "@vue/babel-preset-app": "4.5.18"
   }
 }

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.runss.top/" rel="noopener noreferrer">
-    <img width="180" src="https://cdn.jsdelivr.net/gh/foreverRuns/image-hosting@main/blog/logo.29d7zjnv9nb4.png" alt="logo">
+    <img width="180" src="https://cdn.staticaly.com/gh/foreverRuns/image-hosting@main/blog/logo.29d7zjnv9nb4.png" alt="logo">
   </a>
 </p>
 

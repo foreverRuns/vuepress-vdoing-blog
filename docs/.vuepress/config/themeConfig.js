@@ -22,7 +22,11 @@ module.exports = {
   //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
   // 随机图片API
   // bodyBgImg: 'https://api.yimian.xyz/img?type=moe&size=1920x1080', // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
-  bodyBgImg: ['https://cdn.jsdelivr.net/gh/foreverRuns/image-hosting@main/blog/bg-street.568x7lyv9a0w.webp', 'https://cdn.jsdelivr.net/gh/foreverRuns/image-hosting@main/blog/bg-club.1s9q1gb7dk1s.webp', 'https://cdn.jsdelivr.net/gh/foreverRuns/image-hosting@main/blog/bg-classroom.1kvh5rjqvccg.webp'], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
+  bodyBgImg: [
+    'https://cdn.staticaly.com/gh/foreverRuns/image-hosting@main/blog/bg-street.568x7lyv9a0w.webp',
+    'https://cdn.staticaly.com/gh/foreverRuns/image-hosting@main/blog/bg-club.1s9q1gb7dk1s.webp',
+    'https://cdn.staticaly.com/gh/foreverRuns/image-hosting@main/blog/bg-classroom.1kvh5rjqvccg.webp',
+  ], // body背景大图，默认无。 单张图片 String | 多张图片 Array, 多张图片时每隔15秒换一张。
   bodyBgImgOpacity: 0.45, // body背景图透明度，选值 0 ~ 1.0, 默认0.5
 
   // titleBadge: false, // 文章标题前的图标是否显示，默认true
